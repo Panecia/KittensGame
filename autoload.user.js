@@ -8,10 +8,11 @@
 // @match        http*://kittensgame.com/beta/
 // @match        http*://kittensgame.com/alpha/
 // @grant        none
+// @noframes
 // ==/UserScript==
 window.addEventListener("load", function() {
     var script=document.createElement('script');
-    script.src='https://cdn.jsdelivr.net/gh/JonathanBeverley/KittensGame/ScriptKitties.js';
+    script.src='https://cdn.jsdelivr.net/gh/Panecia/KittensGame@main/ScriptKitties.js';
     script.id='SK_origin';
     document.body.appendChild(script);
 }, false);
