@@ -2765,9 +2765,10 @@ SK.Scripts = class {
                     return false;
                 }
                 if (! button.model.enabled) button.controller.updateEnabled(button.model);
-                    if ( button.model.enabled) {
+                    if (button.model.enabled) {
                         for (let i=0; i<5; i++) {
-                            if (i<=5) { this.buyItem(button);}
+                            if (i<5) { this.buyItem(button);
+                                      }
                          }
                     }
                 }
