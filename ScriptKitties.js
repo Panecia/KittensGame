@@ -2758,21 +2758,7 @@ SK.Scripts = class {
         const chronoPossible = this.buildingCount('chronosphere', 'blueprint', 1.0);
         if (chronoPossible < chronoCount) {
             // Phase 1. Explore
-            if (! lizards.unlocked) {
-                const button = game.diplomacyTab.exploreBtn;
-                if (! button) {
-                    console.log('Could not find explore button.');
-                    return false;
-                }
-                if (! button.model.enabled) button.controller.updateEnabled(button.model);
-                    if (button.model.enabled) {
-                        for (let i=0; i<5; i++) {
-                            if (i<5) { this.buyItem(button);
-                                      }
-                         }
-                    }
-                }
-            }
+           this.model.auto.explore = true
 
             // Phase 2. Trade
             if (lizards.unlocked) {
