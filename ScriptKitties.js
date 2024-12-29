@@ -2758,7 +2758,7 @@ SK.Scripts = class {
         const chronoPossible = this.buildingCount('chronosphere', 'blueprint', 1.0);
         if (chronoPossible < chronoCount) {
             // Phase 1. Explore
-           this.model.auto.explore = true
+           this.model.auto.explore = true;
 
             // Phase 2. Trade
             if (lizards.unlocked) {
