@@ -2758,8 +2758,13 @@ SK.Scripts = class {
         const chronoPossible = this.buildingCount('chronosphere', 'blueprint', 1.0);
         if (chronoPossible < chronoCount) {
             // Phase 1. Explore
-           this.model.auto.explore = true;
-
+          switch (action) {
+            case 'init':
+                  this.model.auto.explore = true;
+                  game.ui.activeTabId = 'Bonfire';
+                  game.render();
+                  return true;
+                          }   
             // Phase 2. Trade
             if (lizards.unlocked) {
                 const tradeFifth = Math.floor(game.diplomacy.getMaxTradeAmt(lizards) / 5);
